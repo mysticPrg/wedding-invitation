@@ -1,10 +1,17 @@
 import * as React from 'react';
-import './App.css';
 
-class App extends React.Component {
+interface IProp { 
+  scroll: number;
+}
+
+class App extends React.Component<IProp> {
   public render() {
+    const { scroll } = this.props;
+
     return (
-      <div />
+      <div style={{height: 2000, fontSize: '200px'}}>
+        {scroll}
+      </div>
     );
   }
 }
